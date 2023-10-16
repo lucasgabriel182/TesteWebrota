@@ -1,58 +1,104 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Suporte WebRota</title>
-    <link rel="stylesheet" type="text/css" href="suporte.css">
+    <link rel="stylesheet" type="text/css" href="suporte.css" />
 </head>
+
 <body>
     <div class="header">
-        <img src="logowebrota.png" alt="WebRota Logo">
+        <img src="logowebrota.png" alt="WebRota Logo" />
     </div>
+
+    <div class="title">
+        <h2>Manual do Suporte</h2>
+    </div>
+
     <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-outline-primary">
-            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('triagem')"> Triagem
+            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('triagem')" />
+            Triagem
         </label>
         <label class="btn btn-outline-primary">
-            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('tecnica')"> Técnica
+            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('tecnica')" />
+            Técnica
         </label>
         <label class="btn btn-outline-primary">
-            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('agendamento')"> Agendamento
+            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('agendamento')" />
+            Agendamento
         </label>
         <label class="btn btn-outline-primary">
-            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('analise')"> Análise
+            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('analise')" />
+            Análise
         </label>
-    </div> 
+    </div>
+    <br />
 
-    <div id="triagemSection" class="manual-section" style="display: none;">
-        Conteúdo da seção de Triagem
+    <div id="triagemSection" class="manual-section" style="display: none">
+        <p>
+            Conteúdo da área de triagem
+        </p>
     </div>
 
-    <div id="tecnicaSection" class="manual-section" style="display: none;">
-        Conteúdo da seção Técnica
+    <div id="tecnicaSection" class="manual-section" style="display: none">
+        <p>
+            A área técnica é o departamento responsável pela manutenção, atualização
+            e confecção dos equipamentos vendidos pela empresa. São feitas as
+            manutenções de rastreadores, identificadores de motorista e sensores
+            como por exemplo de temperatura. A técnica também é responsável pela
+            área de almoxarifado mantendo a organização e padronização dos
+            patrimônios da empresa como computadores, ferramentas e termos de
+            comprometimento de preservação de equipamentos utilizados pelos demais
+            funcionários. Responsáveis também pelo envio dos equipamentos
+            confeccionados pelos mesmos, embalando e fazendo o envio pelo correio e
+            fornecendo o código de rastreamento para maior segurança do cliente.
+
+            Aqui estão alguns exemplos na parte de Análise:
+        <ul>
+            <li>Realizar a higienização adequada do equipamento de acordo com os protocolos de limpeza estabelecidos
+                pela empresa.</li>
+            <li>Verificar o estado da placa de rastreamento, assegurando-se de examinar minuciosamente quaisquer sinais
+                de desgaste ou avaria.</li>
+            <li>Acessar o sistema Syntrack para inspecionar a versão atualizada do software do rastreador, garantindo a
+                conformidade com os requisitos de funcionamento especificados.</li>
+            <li>Caso seja identificada uma versão desatualizada, proceder com a atualização do software utilizando a
+                ferramenta apropriada, como o Flashtool, observando os procedimentos recomendados pelo fabricante.</li>
+            <li>Recuperar o perfil de configuração apropriado, compatível com a operadora correspondente, a fim de
+                garantir a conectividade e o funcionamento adequado do equipamento.</li>
+            <li>Revisar minuciosamente os parâmetros de configuração, verificando se estão ajustados de acordo com as
+                diretrizes e especificações estabelecidas pelos padrões operacionais vigentes.</li>
+            <li>Ajustar e alinhar os parâmetros do equipamento de acordo com as diretrizes de configuração definidas,
+                garantindo a otimização do desempenho e o funcionamento correto do sistema de rastreamento.</li>
+        </ul>
+        </p>
+
     </div>
 
-    <div id="agendamentoSection" class="manual-section" style="display: none;">
-        Conteúdo da seção de Agendamento
+    <div id="agendamentoSection" class="manual-section" style="display: none">
+        <p>
+            Conteúdo da área de agendamento
+        </p>
     </div>
 
-    <div id="analiseSection" class="manual-section" style="display: none;">
-        Conteúdo da seção de Análise
+    <div id="analiseSection" class="manual-section" style="display: none">
+        <p>
+            Conteúdo da área de Análise
+        </p>
     </div>
 
     <script>
         function showSection(sectionId) {
-            var sections = document.querySelectorAll('.manual-section');
-            sections.forEach(function(section) {
-                section.style.display = 'none';
+            var sections = document.querySelectorAll(".manual-section");
+            sections.forEach(function (section) {
+                section.style.display = "none";
             });
-    
-            var sectionToShow = document.getElementById(sectionId + 'Section');
-            sectionToShow.style.display = 'block';
+
+            var sectionToShow = document.getElementById(sectionId + "Section");
+            sectionToShow.style.display = "block";
         }
     </script>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
