@@ -8,29 +8,51 @@
     <div class="header">
         <img src="logowebrota.png" alt="WebRota Logo">
     </div>
-    <div class="btn" data-toggle="buttons">
+    <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-outline-primary">
-            <button type="radio" name="btnradio" autocomplete="off"> Triagem
+            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('triagem')"> Triagem
         </label>
-    <div class="btn" data-toggle="buttons">
         <label class="btn btn-outline-primary">
-            <button type="radio" name="btnradio" autocomplete="off"> Técnica
+            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('tecnica')"> Técnica
         </label>
-    </div>
-    <div class="btn" data-toggle="buttons"></div>
         <label class="btn btn-outline-primary">
-            <button type="radio" name="btnradio" autocomplete="off"> Agendamento
+            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('agendamento')"> Agendamento
+        </label>
+        <label class="btn btn-outline-primary">
+            <input type="radio" name="btnradio" autocomplete="off" onclick="showSection('analise')"> Análise
         </label>
     </div> 
-    <div class="btn" data-toggle="buttons"></div>
-        <label class="btn btn-outline-primary">
-            <button type="radio" name="btnradio" autocomplete="off"> Análise
-        </label>    
-</div>
+
+    <div id="triagemSection" class="manual-section" style="display: none;">
+        Conteúdo da seção de Triagem
+    </div>
+
+    <div id="tecnicaSection" class="manual-section" style="display: none;">
+        Conteúdo da seção Técnica
+    </div>
+
+    <div id="agendamentoSection" class="manual-section" style="display: none;">
+        Conteúdo da seção de Agendamento
+    </div>
+
+    <div id="analiseSection" class="manual-section" style="display: none;">
+        Conteúdo da seção de Análise
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.manual-section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+    
+            var sectionToShow = document.getElementById(sectionId + 'Section');
+            sectionToShow.style.display = 'block';
+        }
+    </script>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</body>
 </html>
-
